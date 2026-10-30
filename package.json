@@ -1,0 +1,16 @@
+{
+  "name": "gallant-corner",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev -- --host 0.0.0.0\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev -- --host 0.0.0.0",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server run start",
+    "test": "node --test server/tests/products.test.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
